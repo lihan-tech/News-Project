@@ -29,4 +29,4 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           FILE_PATH: "Github/Final Zip/Final Analysis.zip"
           SEND_TELEGRAM: "true"
-        run: python "Github/Jupyter Notebook/nows now.py"
+        run: python "Github/Jupyter Notebook/news now.py"
