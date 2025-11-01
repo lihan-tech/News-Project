@@ -405,7 +405,7 @@ try:
         cell_value = sheet[f'A{row}'].value  # Read value from column A
         if cell_value:  # Check if the cell is not empty
             url = cell_value.strip()  # Remove any extra spaces around the URL
-            save_path = rf"C:\Users\bomma\Desktop\Github\All download pdfs\{os.path.basename(urlparse(url).path)}"
+            save_path = rf"Github/All download pdfs/{os.path.basename(urlparse(url).path)}"
             
             # Create a new thread for each download
             thread = threading.Thread(target=process_url, args=(row, url, save_path))
@@ -1153,6 +1153,7 @@ if __name__ == "__main__":
 print('from here only for laptop code run this is copy the files to google drive for access mobile codes')
 
 # %%
+
 
 
 
