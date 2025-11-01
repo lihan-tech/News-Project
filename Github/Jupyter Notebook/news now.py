@@ -1114,7 +1114,7 @@ import requests
 # Read from environment variables set by GitHub Actions
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
-FILE_PATH = os.getenv("FILE_PATH", "Final Zip/Final Analysis.zip")  # default relative path
+FILE_PATH = os.getenv("FILE_PATH", "Github/Final Zip/Final Analysis.zip")  # default relative path
 
 MESSAGE = (
     "GitHub Rashmi: News Download and Extraction completed.\n"
@@ -1153,6 +1153,7 @@ if __name__ == "__main__":
 print('from here only for laptop code run this is copy the files to google drive for access mobile codes')
 
 # %%
+
 
 
 
