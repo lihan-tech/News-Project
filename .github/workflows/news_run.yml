@@ -1,4 +1,4 @@
-name: Run "nows now.py" @ 7 PM IST (Mon–Fri)
+name: Run "news now.py" @ 7 PM IST (Mon–Fri)
 
 on:
   schedule:
@@ -27,4 +27,4 @@ jobs:
 
       - name: Run your Python script
         run: |
-          python "Github/Jupyter Notebook/nows now.py"
+          python "Github/Jupyter Notebook/news now.py"
