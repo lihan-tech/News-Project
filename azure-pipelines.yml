@@ -1,0 +1,19 @@
+trigger: none   # Don't auto-trigger on commits
+
+schedules:
+  - cron: "30 3 * * 1-5"     # Run 9:00 AM IST (Mon–Fri)
+    displayName: "Morning Run"
+    always: true
+
+pool:
+  vmImage: 'ubuntu-latest'    # Use free Linux VM
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.12'
+
+  - script: |
+      pip install -r requirements.txt
+      news_now.py.py
+    displayName: "Run Python Script"
