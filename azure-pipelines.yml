@@ -1,12 +1,16 @@
-trigger: none   # Don't auto-trigger on commits
+trigger: none
+pr: none
 
 schedules:
-  - cron: "30 3 * * 1-5"     # Run 9:00 AM IST (Mon–Fri)
+  - cron: "30 3 * * 1-5"        # 9:00 AM IST (cron UTC)
     displayName: "Morning Run"
     always: true
+    branches:
+      include:
+        - main                  # change to 'master' if your repo branch is named master
 
 pool:
-  vmImage: 'ubuntu-latest'    # Use free Linux VM
+  vmImage: 'ubuntu-latest'
 
 steps:
   - task: UsePythonVersion@0
@@ -14,6 +18,6 @@ steps:
       versionSpec: '3.12'
 
   - script: |
-      pip install -r requirements.txt
-      news_now.py.py
+      # pip install -r requirements.txt   # uncomment if you have requirements.txt
+      python news_now.py                  # replace with your Python file name
     displayName: "Run Python Script"
